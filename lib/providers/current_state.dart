@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CurrentState extends ChangeNotifier {
   DeviceInfo currentDevice = Devices.ios.iPhone13;
-  int knobSelected = 2;
+  int knobSelected = 0;
   void changeSelectedDevice(DeviceInfo device) {
     currentDevice = device;
     notifyListeners();

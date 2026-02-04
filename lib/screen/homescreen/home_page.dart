@@ -80,24 +80,27 @@ class HomePage extends StatelessWidget {
                       BlurContainer(
                           height: 345,
                           width: 247,
-                          childG: Wrap(
-                            spacing: 10,
-                            runSpacing: 10,
-                            children: List.generate(
-                                colorPalettes.length,
-                                (index) => CustomButton(
-                                      onPressed: () {
-                                        currentState.changeSelectedKnob(index);
-                                      },
-                                      animate: true,
-                                      isThreeD: true,
-                                      backgroundColor:
-                                          colorPalettes[index].color,
-                                      height: 45,
-                                      width: 45,
-                                      borderRadius: 100,
-                                      shadowColor: Colors.white,
-                                    )),
+                          childG: Center(
+                            child: Wrap(
+                              spacing: 10,
+                              runSpacing: 10,
+                              children: List.generate(
+                                  colorPalettes.length,
+                                  (index) => CustomButton(
+                                        onPressed: () {
+                                          currentState
+                                              .changeSelectedKnob(index);
+                                        },
+                                        animate: true,
+                                        isThreeD: true,
+                                        backgroundColor:
+                                            colorPalettes[index].color,
+                                        height: 45,
+                                        width: 45,
+                                        borderRadius: 100,
+                                        shadowColor: Colors.white,
+                                      )),
+                            ),
                           )),
                       SizedBox(height: 20),
                       BlurContainer(height: 245, width: 247)
